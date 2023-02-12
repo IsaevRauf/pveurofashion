@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "image": "img/e1.jpg",
+    "name": "Heri 323",
+    "size": [48, 50, 52, 54, 56],
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "image": "img/e2.jpg",
+    "name": "Peri 5822",
+    "size": [48, 50, 52, 54, 56],
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "image": "./img/e3.jpg",
+    "name": "Jeri 848",
+    "size": [48, 50, 52, 54, 56],
+    "quantity": 1
+  },
+  {
+    "id": 4,
+    "image": "img/e4.jpg",
+    "name": "Seri 948",
+    "size": [48, 50, 52, 54, 56],
+    "quantity": 1
+  }
+]
