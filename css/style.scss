@@ -3,6 +3,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   min-width: 320px;
+  max-width: 1025px;
+  margin: 0 auto;
   .container {
     padding: 0 15px;
   }
@@ -70,8 +72,7 @@ body {
 //==КНОПКА МЕНЮ БУРГЕР
 
 //hidden menu================================================
-.hidden-menu{
-  
+.hidden-menu {
   width: 100%;
   background-color: #ffffff;
   position: absolute;
@@ -81,34 +82,33 @@ body {
   height: 100vh;
   transition: 0.7s;
   transform: translateX(-100%);
-  &__list{
+  &__list {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
     margin-top: 50px;
     padding: 0 15px;
   }
-  &__link{
+  &__link {
     text-decoration: none;
     color: #000;
     font-size: 16px;
     line-height: 25px;
   }
-  &__active{
+  &__active {
     transform: translateX(0);
-    
   }
 }
-.hidden-menu__media{
+.hidden-menu__media {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  & img{
+  & img {
     width: 40px;
   }
 }
 
-.line{
+.line {
   width: 80%;
   height: 1px;
   margin: 20px auto;
@@ -197,7 +197,7 @@ body {
 
 //=====SLICK SLIDER==============
 
-.catalog-btn{
+.catalog-btn {
   border: 1px solid #000;
   display: flex;
   width: 80%;
@@ -207,58 +207,75 @@ body {
   margin: 15px auto;
   text-decoration: none;
   color: #000;
-  background-image: radial-gradient(circle at 50% -20.71%, #b2dafc 0, #b8d9fd 6.25%, #bed7fd 12.5%, #c5d5fd 18.75%, #ccd4fc 25%, #d2d2fa 31.25%, #d9d0f8 37.5%, #dfcff5 43.75%, #e5cdf2 50%, #eaccee 56.25%, #efcaea 62.5%, #f4c9e5 68.75%, #f8c8e0 75%, #fbc8db 81.25%, #fdc7d6 87.5%, #ffc7d1 93.75%, #ffc7cc 100%);
-
+  background-image: radial-gradient(
+    circle at 50% -20.71%,
+    #b2dafc 0,
+    #b8d9fd 6.25%,
+    #bed7fd 12.5%,
+    #c5d5fd 18.75%,
+    #ccd4fc 25%,
+    #d2d2fa 31.25%,
+    #d9d0f8 37.5%,
+    #dfcff5 43.75%,
+    #e5cdf2 50%,
+    #eaccee 56.25%,
+    #efcaea 62.5%,
+    #f4c9e5 68.75%,
+    #f8c8e0 75%,
+    #fbc8db 81.25%,
+    #fdc7d6 87.5%,
+    #ffc7d1 93.75%,
+    #ffc7cc 100%
+  );
 }
 //content section
 
-.content__first-img{
+.content__first-img {
   margin-top: 60px;
   width: 100%;
   height: 550px;
-  object-fit:cover;
+  object-fit: cover;
 }
-.content__text{
+.content__text {
   font-size: 15px;
 }
-.container__title{
+.container__title {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.content__text{
+.content__text {
   font-size: 16px;
   line-height: 26px;
 }
 
 //advantages
-.advantages{
-  .advantages__one{
+.advantages {
+  .advantages__one {
     border: solid 1px #000;
     text-align: center;
     margin-top: 50px;
     position: relative;
     margin-bottom: 50px;
   }
-  .advantages__img{
+  .advantages__img {
     width: 60px;
     position: relative;
     top: -15px;
   }
-  &__title{
+  &__title {
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 15px;
-
   }
-  &__text{
+  &__text {
     font-size: 13px;
     line-height: 25px;
     padding-bottom: 40px;
   }
 }
-.footer{
+.footer {
   background-color: #f8f8f8;
   height: 100px;
   display: flex;
@@ -267,42 +284,46 @@ body {
   font-size: 13px;
   color: #8b8b8b;
 }
-  
+
 // КАТАЛОГ catalog.html
 
-.catalog{
-  
-
-  &__title{
+.catalog {
+  &__title {
     font-size: 56px;
     margin-top: 15px;
     margin-bottom: 80px;
+    animation: title 1s forwards;
+    transform: scale(-1);
   }
-  &__list{
+  &__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 15px;
   }
-  &__img{
+  &__img {
     margin-bottom: 15px;
   }
-  &__name{
+  &__card:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  &__name {
     font-size: 23px;
     text-align: center;
     margin-bottom: 15px;
   }
-  &__size{
+  &__size {
     display: flex;
     justify-content: center;
     gap: 10px;
     font-size: 13px;
   }
-  &__size a{
+  &__size a {
     text-decoration: none;
     color: grey;
     margin-bottom: 10px;
   }
-  &__price{
+  &__price {
     display: block;
     font-size: 12px;
     margin: 0 auto;
@@ -312,3 +333,101 @@ body {
     margin-bottom: 35px;
   }
 }
+
+@media (min-width: 768px) {
+  .catalog__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .menu__logo {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .slider__item img {
+    width: 100vw;
+    height: 700px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    // -o-object-position: -50px -50px;
+    object-position: -200px -200px;
+  }
+  .slick-active {
+    transform-origin: left center;
+  }
+}
+
+//about us
+
+.about-us__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transform: scale(-1);
+  animation: title 1s forwards;
+}
+.about-us__text {
+  transform: scale(-1);
+  animation: title 1s forwards;
+}
+
+@keyframes title {
+  100% {
+    scale: -1;
+  }
+}
+
+//contacts
+.contacts {
+  &__input_name{
+    border: 1px solid grey;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  &__input_phone{
+    border: 1px solid grey;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+  }
+  &__input_email{
+    border: 1px solid grey;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+  }
+  &__textarea{
+    border: solid 1px grey;
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+  }
+  &__title{
+    font-size: 26px;
+    font-weight: 700;
+    transform: scale(-1);
+    animation: title 0.5s forwards;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  &__manager{
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 30px;
+    
+  }
+  &__name{
+    font-weight: 700;
+  }
+  &__seller{
+    font-size: 16px;
+    font-style: italic;
+
+  }
+}
+

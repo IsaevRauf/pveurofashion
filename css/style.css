@@ -2,6 +2,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   min-width: 320px;
+  max-width: 1025px;
+  margin: 0 auto;
 }
 body .container {
   padding: 0 15px;
@@ -270,6 +272,8 @@ body .container {
   font-size: 56px;
   margin-top: 15px;
   margin-bottom: 80px;
+  animation: title 1s forwards;
+  transform: scale(-1);
 }
 .catalog__list {
   display: grid;
@@ -279,6 +283,10 @@ body .container {
 }
 .catalog__img {
   margin-bottom: 15px;
+}
+.catalog__card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 .catalog__name {
   font-size: 23px;
@@ -304,4 +312,92 @@ body .container {
   text-decoration: underline;
   color: black;
   margin-bottom: 35px;
+}
+
+@media (min-width: 768px) {
+  .catalog__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .menu__logo {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  .catalog__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .slider__item img {
+    width: 100vw;
+    height: 700px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: -200px -200px;
+       object-position: -200px -200px;
+  }
+  .slick-active {
+    transform-origin: left center;
+  }
+}
+.about-us__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transform: scale(-1);
+  animation: title 1s forwards;
+}
+
+.about-us__text {
+  transform: scale(-1);
+  animation: title 1s forwards;
+}
+
+@keyframes title {
+  100% {
+    scale: -1;
+  }
+}
+.contacts__input_name {
+  border: 1px solid grey;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px;
+}
+.contacts__input_phone {
+  border: 1px solid grey;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+}
+.contacts__input_email {
+  border: 1px solid grey;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+}
+.contacts__textarea {
+  border: solid 1px grey;
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+}
+.contacts__title {
+  font-size: 26px;
+  font-weight: 700;
+  transform: scale(-1);
+  animation: title 0.5s forwards;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.contacts__manager {
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 30px;
+}
+.contacts__name {
+  font-weight: 700;
+}
+.contacts__seller {
+  font-size: 16px;
+  font-style: italic;
 }/*# sourceMappingURL=style.css.map */

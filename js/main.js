@@ -1,5 +1,4 @@
 
-
 // slick slider
 $(document).ready(function () {
   $(".slider").slick({
@@ -59,6 +58,5 @@ products.forEach(({id, name, image, size}) => {
   `;
 });
 catalogList.innerHTML = htmlCatalog
-
 
 
